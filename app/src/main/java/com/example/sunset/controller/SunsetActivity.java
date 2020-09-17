@@ -1,15 +1,11 @@
 package com.example.sunset.controller;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 
-import com.example.sunset.R;
-
-public class SunsetActivity extends AppCompatActivity {
+public class SunsetActivity extends SingleFragmentActivity{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sunset);
+    public Fragment mFragment() {
+        return SunsetFragment.newInstance();
     }
 }
